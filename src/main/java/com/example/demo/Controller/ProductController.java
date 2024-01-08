@@ -18,18 +18,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 
-@RequestMapping("product1")
+@RequestMapping("/product")
 public class ProductController {
 
     @Autowired
     private ProductRepository productrepository;
-    @PostMapping("addproduct")
+    @PostMapping("add")
     public ResponseEntity<?> addProduct(@RequestBody Product product)
     {
         Product save = productrepository.save(product);
         return ResponseEntity.ok(save);
     }
-    @GetMapping("getproduct")
+    @GetMapping("show")
     public ResponseEntity<?> getproduct()
     {
         return ResponseEntity.ok(this.productrepository.findAll());
