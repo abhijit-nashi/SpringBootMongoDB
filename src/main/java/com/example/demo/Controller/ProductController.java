@@ -1,7 +1,7 @@
 package com.example.demo.Controller;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +17,7 @@ public class ProductController {
 
     private ProductServices productservice;
 
-    @Autowired
+    //@Autowired
     public ProductController(ProductServices productservice) {
         this.productservice = productservice;
     }
